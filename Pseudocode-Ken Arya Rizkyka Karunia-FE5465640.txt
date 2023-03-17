@@ -1,0 +1,32 @@
+PSEUDOCODE PROGRAM SHOPIING CART
+
+READ AND WRITE "listItem" with record
+READ AND WRITE "itemName" with string
+READ AND WRITE "isExit" with boolean
+READ AND WRITE "totalItems" with number
+READ AND WRITE "itemsQuantity" with number
+STORE "isExit" with false
+STORE "totalItems" with 0
+STORE "itemsQuantity" with 0
+
+PROCEDURE addItem(itemName, itemsQuantity)
+	STORE "itemName" with "name"
+	STORE "itemQuantity" with "quantity"
+	STORE "listItem" with "itemName" , "itemsQuantity"
+	INCREMENT "totalItems" by "itemsQuantity"
+END PROCEDURE
+
+WHILE "isExit" with false
+	READ AND WRITE "userChoice" with number
+	STORE "userChoice" with "add" or "total" or "quit"
+	IF "userChoice" equal "add"
+		CALL addItem("name", "quantity")
+	ELSE IF "userChoice" equal "total"
+		PRINT "listItem"
+		PRINT "totalItems"
+	ELSE IF "userChoice" equal "quit"
+		STORE isExit with true
+	ELSE
+		PRINT "Invalid input"
+	END IF
+END WHILE
